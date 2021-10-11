@@ -17,9 +17,14 @@ ______________________________________
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	float distance = atof(argv[1]);
-	int result;
+	float result;
 	//Your codes here
-	
-	printf("%d", result);
+
+	if (distance <= 30) 
+		result = 15000 + (distance - 2)*8000;
+	else 
+		result = 15000 + 28*8000 + (distance - 30)*5000;
+	printf("%.0f", result);
 	return 0;
+
 }
